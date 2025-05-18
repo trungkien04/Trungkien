@@ -1,0 +1,18 @@
+stages:
+  - test
+  - deploy
+
+test_job:
+  stage: test
+  script:
+    - echo "🔍 Đang kiểm thử mã..."
+    - python3 test.py
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "🚀 Triển khai mô phỏng..."
+    - mkdir -p deployed/
+    - cp *.py deployed/
+  only:
+    - master
