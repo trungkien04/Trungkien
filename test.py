@@ -1,2 +1,1 @@
-# test.py
-print("✅ Test passed!")
+print("✅ Kiểm thử thành công với GitHub Actions!")
